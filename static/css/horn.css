@@ -1,0 +1,32 @@
+body {
+  font-family: monospace;
+  font-size: 300%;
+  padding: 0 0.5em;
+}
+
+div {
+  border-radius: 5px;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.header, .footer {
+  background-color: lightslategray;
+  margin: 0;
+}
+
+#controls {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+#controls button {
+  background-color: gray;
+  border: solid black 1px;
+  display: table-cell;
+  height: 4em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+}
