@@ -12,7 +12,7 @@ function playSound(name) {
 }
 
 function htmlControlForName(name) {
-    return `<button onclick='playSound("${name}");'>${name}</button>\n`;
+    return `<div onclick='playSound("${name}");'>${name}</div>\n`;
 }
 
 function insertHTML() {

@@ -17,15 +17,15 @@ div {
 
 #controls {
   display: table;
+  height: 3em;
   table-layout: fixed;
   width: 100%;
 }
 
-#controls button {
-  background-color: gray;
-  border: solid black 1px;
-  display: table-cell;
-  height: 4em;
+#controls div {
+  background-color: lightgray;
+  border: gray solid 1px;
+  margin: 0;
   text-transform: uppercase;
   vertical-align: middle;
   width: 100%;
