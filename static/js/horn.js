@@ -3,12 +3,15 @@
 
 var SOUNDS = {
     "astley": "give_you_up",
+    "chaching": "chaching",
     "dj": "dj_airhorn",
     "flute": "zelda_recorder",
     "get": "zelda_get",
     "howard": "dean_scream",
     "riverside": "riverside",
+    "scratch": "scratch",
     "secret": "zelda_secret",
+    "whip": "whip",
     "wilhelm": "wilhelm_scream"
 }
 
