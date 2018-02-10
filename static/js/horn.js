@@ -1,9 +1,18 @@
+
+// Constants
+
 var SOUNDS = {
-    'dj': 'dj_airhorn',
-    'flute': 'zelda_recorder',
-    'get': 'zelda_get',
-    'secret': 'zelda_secret',
+    "astley": "give_you_up",
+    "dj": "dj_airhorn",
+    "flute": "zelda_recorder",
+    "get": "zelda_get",
+    "howard": "dean_scream",
+    "riverside": "riverside",
+    "secret": "zelda_secret",
+    "wilhelm": "wilhelm_scream"
 }
+
+// Functions
 
 function playSound(name) {
     var audio = document.getElementById('audio');
@@ -25,5 +34,7 @@ function insertHTML() {
 
     controls.innerHTML = html;
 }
+
+// Main
 
 window.onload = insertHTML;

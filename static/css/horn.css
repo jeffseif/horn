@@ -30,3 +30,8 @@ div {
   vertical-align: middle;
   width: 100%;
 }
+
+#controls div:active {
+    background-color: darkgray;
+    color: white;
+}
