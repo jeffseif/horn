@@ -33,6 +33,6 @@ div {
 }
 
 #controls div:active {
-    background-color: darkgray;
-    color: white;
+  background-color: darkgray;
+  color: white;
 }

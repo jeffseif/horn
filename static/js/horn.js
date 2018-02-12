@@ -14,7 +14,8 @@ var SOUNDS = {
     "secret": "zelda_secret",
     "whip": "whip",
     "wilhelm": "wilhelm_scream"
-}
+};
+var LOOP = false;
 
 // Functions
 
@@ -37,6 +38,11 @@ function insertHTML() {
     }
 
     controls.innerHTML = html;
+}
+
+function toggleLoop() {
+    var audio = document.getElementById('audio');
+    audio.loop = LOOP = !LOOP;
 }
 
 // Main
