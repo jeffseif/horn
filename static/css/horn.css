@@ -6,8 +6,8 @@ body {
 
 div {
   border-radius: 5px;
-  text-align: center;
   margin: 1em 0;
+  text-align: center;
 }
 
 .header, .footer {
@@ -26,6 +26,7 @@ div {
   background-color: lightgray;
   border: gray solid 1px;
   margin: 0;
+  padding: 0.5em 0;
   text-transform: uppercase;
   vertical-align: middle;
   width: 100%;

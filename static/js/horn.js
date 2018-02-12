@@ -5,6 +5,7 @@ var SOUNDS = {
     "astley": "give_you_up",
     "chaching": "chaching",
     "dj": "dj_airhorn",
+    "epic": "epic",
     "flute": "zelda_recorder",
     "get": "zelda_get",
     "howard": "dean_scream",
