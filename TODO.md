@@ -1,0 +1,1 @@
+- Move checkbox to its own div, above the other sounds
