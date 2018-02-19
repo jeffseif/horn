@@ -10,7 +10,7 @@ div {
   text-align: center;
 }
 
-.header, .footer {
+#header, #footer {
   background-color: lightslategray;
   margin: 0;
 }
