@@ -1,4 +1,4 @@
-PYTHON = $(which python3)
+PYTHON = $(shell which python3)
 VENV = venv/
 
 HOST = host.py
