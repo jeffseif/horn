@@ -1,19 +1,16 @@
 PYTHON = $(shell which python3)
 VENV = venv/
 
-HOST = host.py
+HOST = 0.0.0.0
 PORT = 5000
+WSGI = wsgi.py
 
-all: host
+all: wsgi
 
-.PHONY: host
-host: $(VENV) $(HOST)
+.PHONY: wsgi
+wsgi: $(VENV) $(WSGI)
 	@echo "Hosted @ http://$(shell hostname -I | xargs):$(PORT)/"
-	@FLASK_APP=$(HOST) $</bin/flask \
-		run \
-			--host '0.0.0.0' \
-			--port $(PORT) \
-			--reload
+	@FLASK_ENV=development FLASK_RUN_HOST=$(HOST) FLASK_RUN_PORT=$(PORT) $</bin/flask run
 
 $(VENV): requirements.txt
 	@virtualenv \
