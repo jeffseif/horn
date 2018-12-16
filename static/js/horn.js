@@ -3,6 +3,7 @@
 
 var SOUNDS = {
     "astley": "give_you_up",
+    "cooking": "cooking",
     "chaching": "chaching",
     "dj": "dj_airhorn",
     "epic": "epic",
