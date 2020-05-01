@@ -14,7 +14,6 @@ wsgi: $(VENV) $(WSGI)
 
 $(VENV): requirements.txt
 	@virtualenv \
-		--no-site-packages \
 		--python=$(PYTHON) \
 		$@
 	@$@/bin/pip install \
