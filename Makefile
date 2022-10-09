@@ -1,28 +1,24 @@
-PYTHON = $(shell which python3)
-VENV = venv/
+.DELETE_ON_ERROR:
+.DEFAULT_GOAL := wsgi
 
+PYTHON = $(shell which python3)
+SHELL = /bin/bash
+VENV_DIR = venv
+
+$(VENV_DIR):
+	@$(PYTHON) -m venv $@
+	@$@/bin/pip install --quiet --upgrade pip
+	@$@/bin/pip install --quiet flask
+
+LOCKFILE = .already.running.lock
 HOST = 0.0.0.0
-PORT = 5000
+PORT ?= 5000
 WSGI = wsgi.py
 
-all: wsgi
-
 .PHONY: wsgi
-wsgi: $(VENV) $(WSGI)
-	@echo "Hosted @ http://$(shell hostname -I | xargs):$(PORT)/"
-	@FLASK_ENV=development FLASK_RUN_HOST=$(HOST) FLASK_RUN_PORT=$(PORT) $</bin/flask run
+wsgi: $(VENV_DIR) $(WSGI)
+	@FLASK_RUN_HOST=$(HOST) FLASK_RUN_PORT=$(PORT) flock -n $(LOCKFILE) $</bin/flask run
 
-$(VENV): requirements.txt
-	@virtualenv \
-		--python=$(PYTHON) \
-		$@
-	@$@/bin/pip install \
-		--requirement $<
-	@$@/bin/pip install \
-		--upgrade pip
-	@touch $@
-
+.PHONY: clean
 clean:
-	@rm -rf $(VENV)
-	@find . -name '*.pyc' -delete
-	@find . -name '__pycache__' -type d -delete
+	@git clean -fdfx
